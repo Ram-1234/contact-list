@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login-user</title>
+	<style type="text/css">
+		input{
+			margin: 5px;
+			width: 250px;
+			height: 30px;
+		}
+
+		div{
+			background-color: #ffadad;
+			text-align: center;
+			padding: 20px;
+			border: 1px solid black;
+			width: max-content;
+		}
+
+		button{
+			font-size: 20px;
+			margin: 20px;
+            width: 250px;
+            background-color: #06d6a0;
+		}
+
+		label{
+			text-align: flex;
+		}
+        h1{
+        	color: #ef476f;
+        	opacity: 0.6;
+        }
+		#success{
+			color: red;
+		}
+		#forget{
+			color: white;
+		}
+		button:hover{
+               transform: scale(1.02);
+		}
+
+	</style>
+</head>
+<body>
+  
+  <div>
+  	<h1>Login From</h1>
+  	<label>Email</label><br>
+  	<input type="email" id="email"   pattern=".+@globex\.com"  required name="email"><br>
+  	<label>Password</label><br>
+  	<input type="password" id="password" name="password"><br>
+  	<button onclick="submitForm()">login</button><br>
+  	<p id="success"  ></p>
+  	<p id="forget">Forget password!</p>
+  </div>
+  
+ <script type="text/javascript"> 
+ 	localStorage.setItem("user","ramnayan699@gmail.com")
+ 	localStorage.setItem("pass","12345")
+
+ 	let usr=localStorage.getItem("user")
+    let	passw=localStorage.getItem("pass")
+
+   let message= document.getElementById('success')
+ 	
+   function submitForm(){
+   	let email=document.getElementById('email').value
+   	let pass=document.getElementById('password').value
+    if(email===usr && pass===passw){
+      message.innerHTML="login successfull!"
+    }else{
+    	 message.innerHTML="something went wrong!"
+    }
+   }
+
+ </script>
+
+
+</body>
+</html>

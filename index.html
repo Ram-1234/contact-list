@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div{
+			margin: 10px;
+			width: 100px;
+			height: 100px;
+			border: 1px solid black;
+			color: red;
+			text-align: center;
+			display: flex;
+		}
+	</style>
+</head>
+<body>
+	<p><strong>Hello World Top!</strong></p>
+	<H1>hello</H1>
+
+ <div>text1</div>
+ <div>text2</div>
+ <div>text3</div>
+ <div>text4</div>
+ 
+<p><strong>Hello World Bottom!</strong></p>
+ <script >
+ function A(){
+	console.log("This setTimeOut!")
+}
+//setTimeout(A,0)
+
+function B(){
+fetch('https://jsonplaceholder.typicode.com/albums')
+.then(res=> res.json)
+.then(data=>console.log("fetch data ",data))
+}
+setTimeout(A,100)
+B()
+ </script>
+</body>
+</html>

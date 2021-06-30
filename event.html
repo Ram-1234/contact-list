@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>event-bubbling-capturing</title>
+
+	<style type="text/css">
+		.grandparent{
+			border: 1px solid black;
+			margin: 5px;
+			padding: 5px;
+			width: max-content;
+		}
+		.parent{
+			border: 1px solid black;
+			margin: 5px;
+			padding: 5px;
+			width: max-content;
+		}
+		.child{
+			border: 1px solid black;
+			margin: 5px;
+			padding: 5px;
+			width: max-content;
+		}
+	</style>
+</head>
+<body>
+<div class="grandparent">grandparent
+	<div class="parent">parent
+		<div class="child">
+			child
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	document.querySelector(".grandparent").addEventListener('click',(e)=>{
+		console.log('grandparent clicked!');
+	},false)
+	document.querySelector(".parent").addEventListener('click',(e)=>{
+		console.log('parent clicked!');
+	},false)
+	document.querySelector(".child").addEventListener('click',(e)=>{
+		console.log('child clicked!');
+	},false)
+</script>
+</body>
+</html>

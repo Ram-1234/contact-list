@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>fetch api</title>
+	
+</head>
+<body>
+
+	<h1>fetch api<h1>
+		<script type="text/javascript">
+			fetch(`https://6051b8b8fb49dc00175b6997.mockapi.io/api/quotes`,{method:"POST"})
+        .then(file=>file.json())
+        .then(data=>console.log(data))
+        .catch(data=>console.log(data))
+		</script>
+
+</body>
+</html>
+
