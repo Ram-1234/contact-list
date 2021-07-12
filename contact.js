@@ -3,10 +3,6 @@ let all_child=document.getElementsByClassName('all-contact')
  let modal_tag=document.getElementsByClassName('modal-tag')
 
 
-
-
-
-
 function loadImage(numImage=10){
 
   let i=0
@@ -59,11 +55,7 @@ window.addEventListener('scroll',()=>{
     loadImage();
     }
 })
-
 //event handling
-
-
-
 
 function creatediv(item){
 	//console.log(item)
